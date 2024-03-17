@@ -30,7 +30,7 @@ const Admin = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://tsghotelbackend.vercel.app/rooms/addrooms/",
+        "http://localhost:5001/api/rooms/addrooms/",
         newroom,
       );
       console.log(response.data);

@@ -115,7 +115,7 @@ export const Rooms = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "https://tsghotelbackend.vercel.app/rooms/getallrooms/",
+          "http://localhost:5001/api/rooms/getallrooms/",
         );
         console.log(response.data);
         setRooms(response.data);
@@ -177,7 +177,9 @@ export const Users = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("/api/users/getallusers/");
+        const response = await axios.get(
+          "http://localhost:5001/api/users/getallusers/",
+        );
         console.log(response.data);
         setUsers(response.data);
         setLoading(false);

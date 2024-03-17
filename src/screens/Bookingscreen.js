@@ -25,12 +25,9 @@ const Bookingscreen = ({ match }) => {
       try {
         setLoading(true);
         const data = (
-          await axios.post(
-            "https://tsghotelbackend.vercel.app/rooms/getroombyid",
-            {
-              roomid: roomid,
-            },
-          )
+          await axios.post("http://localhost:5001/api/rooms/getroombyid", {
+            roomid: roomid,
+          })
         ).data;
         console.log("Rent per day:", data.rentperday);
 
@@ -68,7 +65,7 @@ const Bookingscreen = ({ match }) => {
     try {
       setLoading(true);
       const result = await axios.post(
-        "/api/bookings/bookroom",
+        "http://localhost:5001/api/bookings/bookroom",
         { ...bookingDetails, token },
         Swal.fire(
           "Congratulations",

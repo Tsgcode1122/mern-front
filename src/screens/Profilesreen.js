@@ -68,11 +68,8 @@ export const MyBookings = () => {
     try {
       setLoading(true);
       const result = await axios.post(
-        "https://tsghotelbackend.vercel.app/bookings/cancelbooking",
-        {
-          bookingid,
-          roomid,
-        },
+        "http://localhost:5001/api/bookings/cancelbooking",
+        { bookingid, roomid },
       );
       console.log("result:", result.data);
       setLoading(false);
