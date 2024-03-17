@@ -20,7 +20,7 @@ const Homescreen = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "https://tsghotelbackend.vercel.app/api/rooms/getallrooms",
+          "https://tsghotelbackend.vercel.app/rooms/getallrooms",
         );
         setRooms(response.data);
         setDuplicaterooms(response.data);

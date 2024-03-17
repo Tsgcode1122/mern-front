@@ -29,7 +29,10 @@ const Admin = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post("/api/rooms/addrooms/", newroom);
+      const response = await axios.post(
+        "https://tsghotelbackend.vercel.app/rooms/addrooms/",
+        newroom,
+      );
       console.log(response.data);
       setLoading(false);
       Swal.fire("Congrats", "Your New Room Added Successfully", "success").then(

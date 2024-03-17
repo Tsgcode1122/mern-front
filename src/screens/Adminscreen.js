@@ -115,7 +115,7 @@ export const Rooms = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "http://localhost:5001/api/rooms/getallrooms/",
+          "https://tsghotelbackend.vercel.app/rooms/getallrooms/",
         );
         console.log(response.data);
         setRooms(response.data);
