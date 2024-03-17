@@ -47,10 +47,7 @@ const Resetpassword = () => {
         password,
       };
 
-      const result = await axios.post(
-        "https://tsghotelbackend.vercel.app/api/users/reset",
-        user,
-      );
+      const result = await axios.post("/api/users/reset", user);
       localStorage.setItem("currentUser", JSON.stringify(result.data));
 
       Swal.fire("", "Password Reset Successful", "success").then((result) => {

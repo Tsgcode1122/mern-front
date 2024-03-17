@@ -67,10 +67,10 @@ export const MyBookings = () => {
   const cancelBooking = async (bookingid, roomid) => {
     try {
       setLoading(true);
-      const result = await axios.post(
-        "https://tsghotelbackend.vercel.app/api/bookings/cancelbooking",
-        { bookingid, roomid },
-      );
+      const result = await axios.post("/api/bookings/cancelbooking", {
+        bookingid,
+        roomid,
+      });
       console.log("result:", result.data);
       setLoading(false);
       Swal.fire("", "Your room booking has been cancelled", "success").then(
