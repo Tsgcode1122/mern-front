@@ -14,7 +14,10 @@ const Loginscreen = () => {
 
     try {
       const result = (
-        await axios.post("http://localhost:5001/api/users/login", user)
+        await axios.post(
+          "https://tsghotelbackend.vercel.app/api/users/login",
+          user,
+        )
       ).data;
       localStorage.setItem("currentUser", JSON.stringify(result));
       setLoginSuccess(true);

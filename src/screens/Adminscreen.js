@@ -178,7 +178,7 @@ export const Users = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "http://localhost:5001/api/users/getallusers/",
+          "https://tsghotelbackend.vercel.app/api/users/getallusers/",
         );
         console.log(response.data);
         setUsers(response.data);

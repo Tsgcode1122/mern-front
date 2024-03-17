@@ -40,7 +40,7 @@ const Registerscreen = () => {
       const user = { name, email, password, confirmpassword };
       setLoading(true);
       const result = await axios.post(
-        "http://localhost:5001/api/users/register",
+        "https://tsghotelbackend.vercel.app/api/users/register",
         user,
       );
       setLoading(false);

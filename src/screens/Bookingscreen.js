@@ -65,7 +65,7 @@ const Bookingscreen = ({ match }) => {
     try {
       setLoading(true);
       const result = await axios.post(
-        "http://localhost:5001/api/bookings/bookroom",
+        "https://tsghotelbackend.vercel.app/api/bookings/bookroom",
         { ...bookingDetails, token },
         Swal.fire(
           "Congratulations",
